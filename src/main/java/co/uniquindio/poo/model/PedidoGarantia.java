@@ -1,4 +1,4 @@
-package uniquindio.edu.co;
+package co.uniquindio.poo.model;
 
 public class PedidoGarantia extends PedidoDecorator {
 
