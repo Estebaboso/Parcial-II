@@ -23,6 +23,7 @@ public class ProxyPago implements ProcesadorPago {
      System.out.println("Transaccion Rechazada, el usuario" + Usuario + "se encuentra bloqueado");
      return;
     }
+    // Revisa si no existe un procesador de pago todavia y lo crea en StripAdapter porque ahi anda el  cobro real de la plata
     if (procesadorPagoReal == null) {
         System.out.println("[PROXY] creando nuevo procesador de pago");
         procesadorPagoReal = new StripAdapter( new StripUsa(), merchantKey);
