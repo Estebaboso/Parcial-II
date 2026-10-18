@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Combo implements Producto{
 
-    private String Nombre;
+    private String nombre;
     private List<Producto> listaDeProductos;
 
-    public Combo(String Nombre){
+    public Combo(String nombre){
 
-        this.Nombre = Nombre;
+        this.nombre = nombre;
         this.listaDeProductos = new ArrayList<>();
     }
 
     //Metodo para agregar productos al combo
-    public void agragarProducto(Producto producto){
+    public void agregarProducto(Producto producto){
         listaDeProductos.add(producto);
     }
 
@@ -36,7 +36,7 @@ public class Combo implements Producto{
     @Override
     public void mostrar() {
 
-        System.out.println("Combo: " + Nombre +"\nPrecio: " + obtenerPrecio());
+        System.out.println("Combo: " + nombre +"\nPrecio: " + obtenerPrecio());
 
         for(Producto p : listaDeProductos){
             p.mostrar();
