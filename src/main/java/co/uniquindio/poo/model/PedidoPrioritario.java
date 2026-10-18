@@ -12,6 +12,6 @@ public class PedidoPrioritario extends PedidoDecorator {
 
     @Override
     public double getPrecio() {
-        return pedidoBasico.getCosto() + 25000;
+        return pedidoBasico.getPrecio() + 25000;
     }
 }
