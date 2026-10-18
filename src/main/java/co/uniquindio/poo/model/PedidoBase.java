@@ -14,6 +14,6 @@ public class PedidoBase implements Pedido {
 
     @Override
     public double getPrecio() {
-        return 5000;
+        return producto.obtenerPrecio();
     }
 }

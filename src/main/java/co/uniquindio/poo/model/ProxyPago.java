@@ -15,7 +15,7 @@ public class ProxyPago implements ProcesadorPago {
     public void cobrarEnPesos(String Usuario, double MontoCOP) {
         System.out.println("[REPORTE AUDITORIA] Petición de cobro de:" + Usuario + "Por el monto de: " + "$" + MontoCOP);
 
-    if (MontoCOP > MontoCOP) {
+    if (MontoCOP > MONTO_TOPE) {
         System.out.println("Transacción Rechazada supera el monto de: " + "$" + MONTO_TOPE);
         return;
     }
@@ -31,7 +31,7 @@ public class ProxyPago implements ProcesadorPago {
 
     procesadorPagoReal.cobrarEnPesos(Usuario, MontoCOP);
 
-    System.out.println("[REPORTE AUDITORIA] Peticion de cobro aprobada para: " + Usuario + "Por el monto de: " + "$" +MontoCOP);
+    System.out.println("[REPORTE AUDITORIA] Peticion de cobro aprobada para: " + Usuario + "Por el monto de: " + "$" + MontoCOP);
 
 
     }
