@@ -12,14 +12,14 @@ public class Main {
         System.out.println("\n=== CASO 1: COMPRA EXITOSA ===");
 
         Combo kitLimpieza = new Combo("Kit de Limpieza");
-        kitLimpieza.agregar(new ProductoIndividual("Paño de microfibra", 25000));
-        kitLimpieza.agregar(new ProductoIndividual("Líquido limpiador", 15000));
+        kitLimpieza.agragarProducto(new ProductoIndividual("Paño de microfibra", 25000));
+        kitLimpieza.agragarProducto(new ProductoIndividual("Líquido limpiador", 15000));
 
 
         Combo comboGamer = new Combo("Combo Setup Gamer");
-        comboGamer.agregar(new ProductoIndividual("Monitor", 800000));
-        comboGamer.agregar(new ProductoIndividual("Teclado", 200000));
-        comboGamer.agregar(kitLimpieza);
+        comboGamer.agragarProducto(new ProductoIndividual("Monitor", 800000));
+        comboGamer.agragarProducto(new ProductoIndividual("Teclado", 200000));
+        comboGamer.agragarProducto(kitLimpieza);
 
         tienda.ejecutarCompraRapida(comboGamer ,"cliente_vip",true, true, false);
 
