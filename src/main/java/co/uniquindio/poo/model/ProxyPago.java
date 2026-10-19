@@ -19,6 +19,8 @@ public class ProxyPago implements ProcesadorPago {
         System.out.println("\nTransacción Rechazada supera el monto de: " + "$" + MONTO_TOPE);
         return;
     }
+    // Segun yo esto deberia ser un estado añadido a la interfaz de procesador de pago porque así queda feo,pero pues como así lo pone en el parcial toco así
+
     if ("BLOQUEADO".equalsIgnoreCase(Usuario)){
      System.out.println("\nTransaccion Rechazada, el usuario se encuentra: " + Usuario);
      return;
