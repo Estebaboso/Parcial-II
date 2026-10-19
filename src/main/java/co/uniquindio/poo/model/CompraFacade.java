@@ -9,7 +9,7 @@ public class CompraFacade {
     }
 
     public void ejecutarCompraRapida(Producto producto, String usuario, boolean conGarantia, boolean conEmpaque, boolean conPrioritario) {
-        System.out.println("[FACADE] Iniciando procesamiento de compra para el usuario: " + usuario);
+        System.out.println("\n[FACADE] Iniciando procesamiento de compra para el usuario: " + usuario);
 
         // Mostrar los productos
         producto.obtenerPrecio();
@@ -28,7 +28,7 @@ public class CompraFacade {
         //Cobrar el pedido
         this.procesador.cobrarEnPesos(usuario, pedido.getPrecio());
 
-        System.out.println("[FACADE] procesamiento de pago completado");
+        System.out.println("\n[FACADE] procesamiento de pago completado");
     }
 }
 

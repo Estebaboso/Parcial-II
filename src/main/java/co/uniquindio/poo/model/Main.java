@@ -9,14 +9,14 @@ public class Main {
 
         // CASO 1: COMPRA EXITOSA CON COMBO ANIDADO
 
-        System.out.println("\n=== CASO 1: COMPRA EXITOSA ===");
+        System.out.println("\n=== CASO 1: COMPRA EXITOSA === ");
 
-        Combo kitLimpieza = new Combo("Kit de Limpieza");
+        Combo kitLimpieza = new Combo("\nKit de Limpieza");
         kitLimpieza.agregarProducto(new ProductoIndividual("Paño de microfibra", 25000));
         kitLimpieza.agregarProducto(new ProductoIndividual("Líquido limpiador", 15000));
 
 
-        Combo comboGamer = new Combo("Combo Setup Gamer");
+        Combo comboGamer = new Combo("\nCombo Setup Gamer");
         comboGamer.agregarProducto(new ProductoIndividual("Monitor", 800000));
         comboGamer.agregarProducto(new ProductoIndividual("Teclado", 200000));
         comboGamer.agregarProducto(kitLimpieza);

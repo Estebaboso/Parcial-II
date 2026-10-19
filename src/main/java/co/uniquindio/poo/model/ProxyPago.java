@@ -13,25 +13,25 @@ public class ProxyPago implements ProcesadorPago {
 
     @Override
     public void cobrarEnPesos(String Usuario, double MontoCOP) {
-        System.out.println("[REPORTE AUDITORIA] Petición de cobro de:" + Usuario + "Por el monto de: " + "$" + MontoCOP);
+        System.out.println("\n[REPORTE AUDITORIA] Petición de cobro de: " + Usuario + " Por el monto de: " + "$" + MontoCOP);
 
     if (MontoCOP > MONTO_TOPE) {
-        System.out.println("Transacción Rechazada supera el monto de: " + "$" + MONTO_TOPE);
+        System.out.println("\nTransacción Rechazada supera el monto de: " + "$" + MONTO_TOPE);
         return;
     }
     if ("BLOQUEADO".equalsIgnoreCase(Usuario)){
-     System.out.println("Transaccion Rechazada, el usuario" + Usuario + "se encuentra bloqueado");
+     System.out.println("\nTransaccion Rechazada, el usuario se encuentra: " + Usuario);
      return;
     }
     // Revisa si no existe un procesador de pago todavia y lo crea en StripAdapter porque ahi anda el  cobro real de la plata
     if (procesadorPagoReal == null) {
-        System.out.println("[PROXY] creando nuevo procesador de pago");
+        System.out.println("\n[PROXY] creando nuevo procesador de pago");
         procesadorPagoReal = new StripAdapter( new StripUsa(), merchantKey);
     }
 
     procesadorPagoReal.cobrarEnPesos(Usuario, MontoCOP);
 
-    System.out.println("[REPORTE AUDITORIA] Peticion de cobro aprobada para: " + Usuario + "Por el monto de: " + "$" + MontoCOP);
+    System.out.println("\n[REPORTE AUDITORIA] Peticion de cobro aprobada para: " + Usuario + " Por el monto de: " + "$" + MontoCOP);
 
 
     }
